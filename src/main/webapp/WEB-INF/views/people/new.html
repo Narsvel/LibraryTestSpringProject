@@ -1,10 +1,27 @@
 <!DOCTYPE html>
+<html lang="en" xmlns:th="http//thymeleaf.org"> <!-- подключаем thymeleaf -->
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Страница добавления человека</title>
 </head>
 <body>
-$END$
+
+<form th:method="POST" th:action="@{/people}" th:object="${person}"> <!-- action указывает куда форма будет передават свои данныйе, на какой URL (@ ставится перед адресом)  -->
+    <label for="name">Введите ФИО: </label>  <!-- for="name" - label для поля с id name -->
+    <input type="text" th:field="*{name}" id="name"/> <!-- th:field="*{name}" - указывается тип поля person куда будет помещено это значение -->
+    <div style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name error</div> <!-- Name error будет заменен на th:errors="*{name}" если тру либо скрыт -->
+    <br/>  <!-- пустая строка -->
+    <label for="birthYear">Введите год рождения: </label>
+    <input type="text" th:field="*{birthYear}" id="birthYear"/>
+    <div style="color:red" th:if="${#fields.hasErrors('birthYear')}" th:errors="*{birthYear}">Age error</div>
+    <br/>
+    <label for="address">Введите адрес: </label>
+    <input type="text" th:field="*{address}" id="address"/>
+    <div style="color:red" th:if="${#fields.hasErrors('address')}" th:errors="*{address}">Address error</div>
+    <br/>
+    <input type="submit" value="Создать"/> <!-- добавляет кнопку Создать! при нажатии на которую произойдет пост запрос на адрес /people -->
+</form>
+
 </body>
 </html>

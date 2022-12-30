@@ -1,10 +1,23 @@
 <!DOCTYPE html>
+<html lang="en" xmlns:th="http//thymeleaf.org"> <!-- подключаем thymeleaf -->
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Страница со списком всех людей</title>
 </head>
 <body>
-$END$
+
+<div th:each="person : ${people}"> <!-- с помощью thymeleaf проходим по элементам person -->
+    <a th:href="@{/people/{id}(id=${person.getId()})}"
+       th:text="${person.getName() + ', ' + person.getBirthYear()}">user</a>
+    <!-- user изменится, thymeleaf автоматически заменит его на person.getName() -->
+    <!-- th:href="@{/people/{id}(id={person.getId()})}" делает каждое имя ссылкой с id полученным из id={person.getId()} -->
+</div>
+
+<br/> <!-- добавляет пустую строку -->
+<hr/> <!-- добавляет линию -->
+
+<a href="/people/new">Добавить человека</a>
+
 </body>
 </html>

@@ -1,10 +1,44 @@
 <!DOCTYPE html>
+<html lang="en" xmlns:th="http//thymeleaf.org">
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Страница книги</title>
 </head>
 <body>
-$END$
+
+<p th:text="${book.getTitle() + ', ' + book.getAuthor() + ', ' + book.getAge()}">VALUE</p>
+<br/>
+
+<div th:if="${book.isPersonId()}">
+    <div>Эта книга свободна. Кому назначить её?</div>
+    <form th:method="PATCH" th:action="@{/books/addPerson/{id}(id=${book.getId()})}" >  <!-- на адрес /books/addPerson/{id}(id=${book.getId()} будет отправляться наш PATCH запрос с выбранным пользователем -->
+        <label for="person">Выберите человека</label>
+        <select th:object="${person}" th:field="*{id}" id="person"> <!-- th:field="*{id}" указываем поле которое выбирается в объекте person и лежит в value -->
+            <option th:each="person : ${people}" th:value="${person.getId()}"
+                    th:text="${person.getName()}"></option> <!-- th:each="person : ${people}" итерация по списку people -->
+            <!-- th:value="${person.getId()}" ид выбранного человека будет отправляться на сервер при выборе option -->
+            <!-- th:text="${person.getName()}" текст отображаемый пользователю -->
+        </select>
+        <input type="submit" value="Назначить книгу" />
+    </form>
+</div>
+
+<div th:unless="${book.isPersonId()}">
+    <form th:method="PATCH" th:action="@{/books/deletePerson/{id}(id=${book.getId()})}" >  <!-- на адрес /books/addPerson/{id}(id=${book.getId()} будет отправляться наш PATCH запрос с выбранным пользователем -->
+        <a th:href="@{/people/{id}(id=${persons.getId()})}"
+           th:text="${'Книга сейчас у: ' + persons.getName()}">VALUE</a>
+        <input type="submit" value="Освободить книгу" />
+    </form>
+</div>
+
+<hr/> <!-- добавляет линию -->
+
+<a th:href="@{/books/{id}/edit(id=${book.getId()})}">Редактировать</a>
+
+<form th:method="DELETE" th:action="@{/books/{id}(id=${book.getId()})}">
+    <input type="submit" value="Удалить!"/>
+</form>
+
 </body>
 </html>

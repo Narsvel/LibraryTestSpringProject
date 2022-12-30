@@ -1,10 +1,21 @@
 <!DOCTYPE html>
+<html lang="en" xmlns:th="http//thymeleaf.org"> <!-- подключаем thymeleaf -->
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Страница со списком всех книг</title>
 </head>
 <body>
-$END$
+
+<div th:each="book : ${books}"> <!-- с помощью thymeleaf проходим по элементам person -->
+    <a th:href="@{/books/{id}(id=${book.getId()})}"
+       th:text="${book.getTitle() + ', ' + book.getAuthor() + ', ' + book.getAge()}">user</a> <!-- сктрока является ссылкой на /books/{id} -->
+</div>
+
+<br/> <!-- добавляет пустую строку -->
+<hr/> <!-- добавляет линию -->
+
+<a href="/books/new">Добавить книгу</a>
+
 </body>
 </html>

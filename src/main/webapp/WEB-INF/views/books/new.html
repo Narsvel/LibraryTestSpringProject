@@ -1,10 +1,27 @@
 <!DOCTYPE html>
+<html lang="en" xmlns:th="http//thymeleaf.org"> <!-- подключаем thymeleaf -->
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Страница добавления книги</title>
 </head>
 <body>
-$END$
+
+<form th:method="POST" th:action="@{/books}" th:object="${book}"> <!-- action указывает куда форма будет передават свои данныйе, на какой URL (@ ставится перед адресом)  -->
+    <label for="title">Введите название книги: </label>
+    <input type="text" th:field="*{title}" id="title"/> <!-- th:field="*{title}" - указывается тип поля book куда будет помещено это значение -->
+    <div style="color:red" th:if="${#fields.hasErrors('title')}" th:errors="*{title}">Name error</div>
+    <br/>  <!-- пустая строка -->
+    <label for="author">Введите автора: </label>
+    <input type="text" th:field="*{author}" id="author"/>
+    <div style="color:red" th:if="${#fields.hasErrors('author')}" th:errors="*{author}">Age error</div>
+    <br/>
+    <label for="age">Введите год: </label>
+    <input type="text" th:field="*{age}" id="age"/>
+    <div style="color:red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Address error</div>
+    <br/>
+    <input type="submit" value="Создать"/> <!-- добавляет кнопку Создать при нажатии на которую произойдет пост запрос на адрес /books -->
+</form>
+
 </body>
 </html>

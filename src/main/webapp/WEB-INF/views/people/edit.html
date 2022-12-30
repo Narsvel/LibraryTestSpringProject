@@ -1,10 +1,29 @@
 <!DOCTYPE html>
+<html lang="en" xmlns:th="http//thymeleaf.org"> <!-- подключаем thymeleaf -->
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Страница изменения человека</title>
 </head>
 <body>
-$END$
+
+<form th:method="PATCH" th:action="@{/people/{id}(id=${person.getId()})}" th:object="${person}"> <!-- action указывает куда форма будет передават свои данные, на какой URL (@ ставится перед адресом)  -->
+    <!-- th:method="PATCH" используется метод thymeleaf, он автомаически создаст скрытое поле PATCH, но метод HTML останется POST -->
+    <!-- {id}(id=${person.getID()}) id берется из метода person.getID() -->
+    <label for="name">Введите ФИО: </label>  <!-- for="name" - label для поля с id name -->
+    <input type="text" th:field="*{name}" id="name"/> <!-- th:field="*{name}" - будет указано текущее name в "${person}" -->
+    <div style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name error</div>
+    <br/>  <!-- пустая строка -->
+    <label for="birthYear">Введите год рождения: </label>
+    <input type="text" th:field="*{birthYear}" id="birthYear"/>
+    <div style="color:red" th:if="${#fields.hasErrors('birthYear')}" th:errors="*{birthYear}">Age error</div>
+    <br/>
+    <label for="address">Введите адрес: </label>
+    <input type="text" th:field="*{address}" id="address"/>
+    <div style="color:red" th:if="${#fields.hasErrors('address')}" th:errors="*{address}">Address error</div>
+    <br/>
+    <input type="submit" value="Редактировать!"/> <!-- добавляет кнопку Create! при нажатии на которую произойдет пост запрос на адрес /people -->
+</form>
+
 </body>
 </html>

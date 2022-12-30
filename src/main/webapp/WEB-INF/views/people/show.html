@@ -1,10 +1,36 @@
 <!DOCTYPE html>
+<html lang="en" xmlns:th="http//thymeleaf.org"> <!-- подключаем thymeleaf -->
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Страница человека</title>
 </head>
 <body>
-$END$
+
+<p th:text="${person.getName() + ', ' + person.getBirthYear()}">VALUE</p> <!-- VALUE изменится, thymeleaf автоматически заменит его на person.getName() -->
+<p th:text="${person.getAddress()}">VALUE</p>
+
+<div th:if="${books.isEmpty()}">
+    <p th:text="${'Человек пока не взял ни одной книги'}">VALUE</p>
+</div>
+
+<div th:unless="${books.isEmpty()}">
+    <hr/> <!-- добавляет линию -->
+    <p th:text="${'Книги:'}">VALUE</p>
+    <div th:each="book : ${books}"> <!-- с помощью thymeleaf проходим по элементам person -->
+        <a th:href="@{/books/{id}(id=${book.getId()})}"
+           th:text="${book.getTitle() + ', ' + book.getAuthor() + ', ' + book.getAge()}">user</a> <!-- сктрока является ссылкой на /books/{id} -->
+    </div>
+</div>
+
+<br/> <!-- добавляет пустую строку -->
+<hr/> <!-- добавляет линию -->
+
+<a th:href="@{/people/{id}/edit(id=${person.getId()})}">Редактировать</a> <!-- с помощью тега <a можно посылать только GET запросы, для DELETE запроса нужно использоват <form -->
+
+<form th:method="DELETE" th:action="@{/people/{id}(id=${person.getId()})}">
+    <input type="submit" value="Удалить!"/>
+</form>
+
 </body>
 </html>
