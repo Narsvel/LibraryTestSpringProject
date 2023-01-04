@@ -1,6 +1,6 @@
 target/
+src/main/resources/database.properties
 !.mvn/wrapper/maven-wrapper.jar
-src/main/resources/target/database.properties
 !**/src/test/**/target/
 
 ### IntelliJ IDEA ###
