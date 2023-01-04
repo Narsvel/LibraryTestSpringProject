@@ -13,7 +13,7 @@ public class Person {
     @Min(value = 1900, message = "Год рождения должен быть раньше чем 1900")
     private Integer birthYear;
 
-    @NotEmpty(message = "Необходимо ввести адрес") //поле address не модет быть null
+    @NotEmpty(message = "Необходимо ввести адрес")
     @Pattern(regexp = "[А-ЯЁ][а-яё]+, [А-ЯЁ][а-яё]+, \\d{6}", message = "Your address should be in this format: Страна, Город, Почтовый индекс (6 цифр)")
     private String address;
 
