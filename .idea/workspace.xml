@@ -9,16 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fa04fea-ae6c-423e-90ac-15808f29f6c3" name="Changes" comment="&quot;Add ru lang&quot;">
-      <change afterPath="$PROJECT_DIR$/src/main/sql/project1_db.sql" afterDir="false" />
+    <list default="true" id="1fa04fea-ae6c-423e-90ac-15808f29f6c3" name="Changes" comment="add ignore file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ost/libraryproject/config/MySpringMvcDispatcherServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ost/libraryproject/config/MySpringMvcDispatcherServletInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ost/libraryproject/controllers/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ost/libraryproject/controllers/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ost/libraryproject/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ost/libraryproject/models/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ost/libraryproject/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ost/libraryproject/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ost/libraryproject/util/PersonValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ost/libraryproject/util/PersonValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/database.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,8 +167,65 @@
       <workItem from="1672301767583" duration="23496000" />
       <workItem from="1672388505511" duration="12778000" />
       <workItem from="1672428399922" duration="788000" />
-      <workItem from="1672849584350" duration="5576000" />
+      <workItem from="1672849584350" duration="7607000" />
     </task>
+    <task id="LOCAL-00001" summary="rix annotation NotEmpty">
+      <created>1672856938979</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672856938980</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add ignore file">
+      <created>1672857122917</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672857122917</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add ignore file">
+      <created>1672857227307</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672857227307</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add ignore file">
+      <created>1672857559885</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672857559886</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add ignore file">
+      <created>1672858387427</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672858387427</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add ignore file">
+      <created>1672858430509</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1672858430509</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add ignore file">
+      <created>1672858489300</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1672858489300</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add ignore file">
+      <created>1672858775113</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1672858775113</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +248,8 @@
     <MESSAGE value="git add ." />
     <MESSAGE value="git add .&#10;git commit -m &quot;add ru lang&quot;" />
     <MESSAGE value="&quot;Add ru lang&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Add ru lang&quot;" />
+    <MESSAGE value="rix annotation NotEmpty" />
+    <MESSAGE value="add ignore file" />
+    <option name="LAST_COMMIT_MESSAGE" value="add ignore file" />
   </component>
 </project>
