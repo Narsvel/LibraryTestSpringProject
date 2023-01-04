@@ -11,15 +11,15 @@
 <p th:text="${person.getAddress()}">VALUE</p>
 
 <div th:if="${books.isEmpty()}">
-    <p th:text="${'Человек пока не взял ни одной книги'}">VALUE</p>
+    <p>Человек пока не взял ни одной книги</p>
 </div>
 
 <div th:unless="${books.isEmpty()}">
     <hr/> <!-- добавляет линию -->
-    <p th:text="${'Книги:'}">VALUE</p>
+    <b>Книги:</b>
     <div th:each="book : ${books}"> <!-- с помощью thymeleaf проходим по элементам person -->
         <a th:href="@{/books/{id}(id=${book.getId()})}"
-           th:text="${book.getTitle() + ', ' + book.getAuthor() + ', ' + book.getAge()}">user</a> <!-- сктрока является ссылкой на /books/{id} -->
+           th:text="${book.getTitle() + ', ' + book.getAuthor() + ', ' + book.getAge()}">book</a> <!-- сктрока является ссылкой на /books/{id} -->
     </div>
 </div>
 

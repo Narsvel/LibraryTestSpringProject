@@ -11,7 +11,7 @@
 <br/>
 
 <div th:if="${book.isPersonId()}">
-    <div>Эта книга свободна. Кому назначить её?</div>
+    <span>Эта книга свободна. Кому назначить её?</span>
     <form th:method="PATCH" th:action="@{/books/addPerson/{id}(id=${book.getId()})}" >  <!-- на адрес /books/addPerson/{id}(id=${book.getId()} будет отправляться наш PATCH запрос с выбранным пользователем -->
         <label for="person">Выберите человека</label>
         <select th:object="${person}" th:field="*{id}" id="person"> <!-- th:field="*{id}" указываем поле которое выбирается в объекте person и лежит в value -->

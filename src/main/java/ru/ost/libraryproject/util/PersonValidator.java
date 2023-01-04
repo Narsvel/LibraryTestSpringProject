@@ -29,7 +29,7 @@ public class PersonValidator implements Validator {
 
         if (personDAO.show(person.getName()).isPresent())
             if (person.getId() != personDAO.show(person.getName()).get().getId()) //проверка для редактирования что id не совпадают
-                errors.rejectValue("name", "", "This name is already taken");
+                errors.rejectValue("name", "", "Это ФИО уже есть в базе");
         //первым значение указываем поле где произошла ошибка "name"
         //второй аргумен должен содержать код ошибки, пропускаем его ""
         //третий аргумент содержит сообщение об ошибке

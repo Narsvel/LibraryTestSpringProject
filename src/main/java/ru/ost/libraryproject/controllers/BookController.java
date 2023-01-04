@@ -77,22 +77,16 @@ public class BookController {
 
     @PatchMapping("/addPerson/{id}")
     public String addBookPersonId(@ModelAttribute("person") Person person,
-                                  @PathVariable("id") int id, ModelMap modelMap) {
+                                  @PathVariable("id") int id) {
         bookDAO.addBookPersonId(id, person.getId());
-        modelMap.addAttribute("book", bookDAO.show(id));
-        modelMap.addAttribute("people", personDAO.index());
-        modelMap.addAttribute("persons", personDAO.show((bookDAO.show(id).isPersonId() ? NULLBOOKPERSONID : bookDAO.show(id).getPerson_id())));
-        return "/books/show";
+        return "redirect:/books/" + id;
     }
 
     @PatchMapping("/deletePerson/{id}")
     public String deleteBookPersonId(@ModelAttribute("person") Person person,
-                                  @PathVariable("id") int id, ModelMap modelMap) {
+                                  @PathVariable("id") int id) {
         bookDAO.deleteBookPersonId(id);
-        modelMap.addAttribute("book", bookDAO.show(id));
-        modelMap.addAttribute("people", personDAO.index());
-        modelMap.addAttribute("persons", personDAO.show((bookDAO.show(id).isPersonId() ? NULLBOOKPERSONID : bookDAO.show(id).getPerson_id())));
-        return "/books/show";
+        return "redirect:/books/" + id;
     }
 
     @DeleteMapping("/{id}")

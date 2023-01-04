@@ -9,15 +9,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fa04fea-ae6c-423e-90ac-15808f29f6c3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="1fa04fea-ae6c-423e-90ac-15808f29f6c3" name="Changes" comment="&quot;Add ru lang&quot;">
+      <change afterPath="$PROJECT_DIR$/src/main/sql/project1_db.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ost/libraryproject/config/MySpringMvcDispatcherServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ost/libraryproject/config/MySpringMvcDispatcherServletInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ost/libraryproject/controllers/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ost/libraryproject/controllers/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ost/libraryproject/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ost/libraryproject/models/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ost/libraryproject/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ost/libraryproject/models/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ost/libraryproject/util/PersonValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ost/libraryproject/util/PersonValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" show_ignored="true" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -166,6 +174,7 @@
       <workItem from="1672301767583" duration="23496000" />
       <workItem from="1672388505511" duration="12778000" />
       <workItem from="1672428399922" duration="788000" />
+      <workItem from="1672849584350" duration="5576000" />
     </task>
     <servers />
   </component>
@@ -182,5 +191,13 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add ru lang" />
+    <MESSAGE value="'Add ru lang'" />
+    <MESSAGE value="git add ." />
+    <MESSAGE value="git add .&#10;git commit -m &quot;add ru lang&quot;" />
+    <MESSAGE value="&quot;Add ru lang&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Add ru lang&quot;" />
   </component>
 </project>

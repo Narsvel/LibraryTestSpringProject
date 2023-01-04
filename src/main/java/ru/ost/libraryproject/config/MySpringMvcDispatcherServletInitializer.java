@@ -30,7 +30,7 @@ public class MySpringMvcDispatcherServletInitializer extends AbstractAnnotationC
     @Override //ниже код для работы фильтра PATH, DELETE и т.д. запросов
     public void onStartup(ServletContext aServletContext) throws ServletException { //запускаеся при старте Spring
         super.onStartup(aServletContext);
-        registerCharacterEncodingFilter(aServletContext);
+        registerCharacterEncodingFilter(aServletContext); //добавляем поддержку UTF-8
         registerHiddenFieldFilter(aServletContext); //в нем запускается метод registerHiddenFieldFilter, в котором добавляется фильтр
     }
 

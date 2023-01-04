@@ -10,15 +10,15 @@ public class Book {
 
     private Integer person_id;
 
-    @NotEmpty(message = "Title should not be empty") //поле title не модет быть null
-    @Size(min = 1, max = 300, message = "Title should be between 1 and 300 characters") //устанавливаем длинну поля title от 1 до 300
+    @NotEmpty(message = "Необходимо ввести название книги") //поле title не модет быть null
+    @Size(min = 1, max = 300, message = "Название книги должно быть от 1 до 300 символов") //устанавливаем длинну поля title от 1 до 300
     private String title;
 
-    @NotEmpty(message = "Author should not be empty")
-    @Size(min = 2, max = 100, message = "Author should be between 1 and 100 characters")
+    @NotEmpty(message = "Необходимо ввести автора книги")
+    @Size(min = 2, max = 100, message = "Автор книги должно быть от 2 до 100 символов")
     private String author;
 
-    @NotNull(message = "Введите год")
+    @NotNull(message = "Необходимо ввести год")
     private Integer age;
 
     public Book(int id, String title, String author, Integer age) {
