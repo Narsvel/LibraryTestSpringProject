@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="project1@localhost">
-  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.39">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>dmy</DateStyle>
       <IntrospectionStateNumber>1935</IntrospectionStateNumber>
@@ -802,9 +802,6 @@ false Zulu
 13183||10|U|G</Grants>
       <IntrospectionStateNumber>1935</IntrospectionStateNumber>
       <ObjectId>16547</ObjectId>
-      <Relations>sequence|table|16571|16572|1
-sequence|table|16582|16583|1
-</Relations>
       <OwnerName>postgres</OwnerName>
     </database>
     <database id="3" parent="1" name="postgres">
@@ -4227,15 +4224,19 @@ sequence|table|16582|16583|1
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
     <sequence id="264" parent="263" name="book_id_seq">
-      <DataType>integer|0s</DataType>
       <ObjectId>16582</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
       <StateNumber>1934</StateNumber>
+      <StoredType>integer|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="265" parent="263" name="person_id_seq">
-      <DataType>integer|0s</DataType>
       <ObjectId>16571</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
       <StateNumber>1932</StateNumber>
+      <StoredType>integer|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <table id="266" parent="263" name="book">
@@ -4251,38 +4252,39 @@ sequence|table|16582|16583|1
       <OwnerName>postgres</OwnerName>
     </table>
     <column id="268" parent="266" name="id">
-      <DataType>integer|0s</DataType>
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>1934</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <SequenceId>16582</SequenceId>
       <TypeId>23</TypeId>
     </column>
     <column id="269" parent="266" name="person_id">
-      <DataType>integer|0s</DataType>
       <Position>2</Position>
       <StateNumber>1934</StateNumber>
+      <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <column id="270" parent="266" name="title">
-      <DataType>varchar(300)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1934</StateNumber>
+      <StoredType>varchar(300)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="271" parent="266" name="author">
-      <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>1934</StateNumber>
+      <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="272" parent="266" name="age">
-      <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>1934</StateNumber>
+      <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <foreign-key id="273" parent="266" name="book_person_id_fkey">
@@ -4290,10 +4292,8 @@ sequence|table|16582|16583|1
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16588</ObjectId>
       <OnDelete>set-null</OnDelete>
-      <RefColNames>id</RefColNames>
-      <RefColPositions>1</RefColPositions>
-      <RefKeyName>person_pkey</RefKeyName>
       <StateNumber>1934</StateNumber>
+      <RefKeyName>person_pkey</RefKeyName>
       <RefTableId>16572</RefTableId>
       <RefTableName>person</RefTableName>
       <RefTableKind>table</RefTableKind>
@@ -4308,7 +4308,6 @@ sequence|table|16582|16583|1
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="275" parent="266" name="book_pkey">
-      <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16587</ObjectId>
       <Primary>1</Primary>
@@ -4322,32 +4321,33 @@ sequence|table|16582|16583|1
       <StateNumber>1932</StateNumber>
     </check>
     <column id="277" parent="267" name="id">
-      <DataType>integer|0s</DataType>
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>1932</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <SequenceId>16571</SequenceId>
       <TypeId>23</TypeId>
     </column>
     <column id="278" parent="267" name="name">
-      <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1932</StateNumber>
+      <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="279" parent="267" name="birthyear">
-      <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1932</StateNumber>
+      <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <column id="280" parent="267" name="address">
-      <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>1932</StateNumber>
+      <StoredType>varchar|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <index id="281" parent="267" name="person_pkey">
@@ -4371,7 +4371,6 @@ sequence|table|16582|16583|1
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
     <key id="283" parent="267" name="person_pkey">
-      <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16579</ObjectId>
       <Primary>1</Primary>
@@ -4379,7 +4378,6 @@ sequence|table|16582|16583|1
       <UnderlyingIndexId>16578</UnderlyingIndexId>
     </key>
     <key id="284" parent="267" name="person_name_key">
-      <ColNames>name</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16581</ObjectId>
       <StateNumber>1932</StateNumber>
